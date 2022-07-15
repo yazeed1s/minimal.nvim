@@ -1,7 +1,7 @@
 return {
-  fg = "#DFE0EA",
-  bg = "#191B20",
-  none = "#191B20",
+  fg               = "#DFE0EA",
+  bg               = "#191B20",
+  none             = "#191B20",
   --16181D
   dark          = '#181A1F',
   comment       = "#4D5264",
@@ -40,7 +40,8 @@ return {
   orange     = "#E0828D",
   orange_wr  = "#E39A65",
   pink       = "#D895C7",
-  yellow     = "#E9BF67",
+  yellow     = "#E9D167",
 
 
 }
+
