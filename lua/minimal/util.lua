@@ -1,22 +1,23 @@
 local M = {}
 
-local function highlight(group, properties)
-    local bg = properties.bg == nil and "" or "guibg=" .. properties.bg
-    local fg = properties.fg == nil and "" or "guifg=" .. properties.fg
-    local style = properties.style == nil and "" or "gui=" .. properties.style
+ local function highlight(group, properties)
+   local bg = properties.bg == nil and '' or 'guibg=' .. properties.bg
+   local fg = properties.fg == nil and '' or 'guifg=' .. properties.fg
+   local style = properties.style == nil and '' or 'gui=' .. properties.style
+   local cmd = table.concat({ 'highlight', group, bg, fg, style }, ' ')
+   vim.api.nvim_command(cmd)
+ end
 
-    local cmd = table.concat({
-        "highlight", group, bg, fg, style
-    }, " ")
+ function M.load(theme)
+   if vim.g.colors_name then
+     vim.cmd 'hi clear'
+   end
+   vim.o.termguicolors = true
+   for _, v in pairs(theme) do
+     for group, properties in pairs(v) do
+       highlight(group, properties)
+     end
+   end
+ end
 
-    vim.api.nvim_command(cmd)
-end
-
-
-function M.initialise(skeleton)
-    for group, properties in pairs(skeleton) do
-        highlight(group, properties)
-    end
-end
-
-return M
+ return M
