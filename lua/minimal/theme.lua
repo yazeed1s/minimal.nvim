@@ -1,9 +1,9 @@
 local colors = require 'minimal.colors'
- local config = require 'minimal.config'
+local config = require 'minimal.config'
 
- local M = {}
+local M = {}
 
- M.base = {
+M.base = {
    ---------------------------------------
    --        Styles
    ---------------------------------------
