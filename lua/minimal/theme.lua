@@ -23,7 +23,7 @@ M.base = {
   Comment      = { fg = colors.comment, style = 'italic' },
   Conceal      = { fg = colors.fg }, -- {bg = config.transparent_background and 'NONE' or colors.bg },
   Conditional  = { fg = colors.red_key_w },
-  Constant     = { fg = colors.white1 },
+  Constant     = { fg = colors.white },
   Cursor       = { fg = colors.yellow, bg = colors.bg },
   CursorColumn = { fg = "NONE", bg = "NONE" },
   -- CursorIM = { fg = colors.cursor_fg, bg = colors.cursor_bg },
@@ -61,7 +61,7 @@ M.base = {
 
   Keyword = { fg = colors.red_key_w },
 
-  Label  = { fg = colors.white },
+  Label  = { fg = colors.red_key_w },
   LineNr = { fg = colors.line_fg, bg = colors.line_bg },
 
   Macro         = { fg = colors.pink },
@@ -80,7 +80,7 @@ M.base = {
   NormalNC    = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
   Number      = { fg = colors.yellow },
 
-  Operator   = { fg = colors.red_key_w },
+  Operator   = { fg = colors.white },
   Pmenu      = { fg = colors.white1, bg = colors.gray },
   PmenuSbar  = { bg = colors.gray },
   PmenuSel   = { fg = colors.black, bg = colors.white },
@@ -97,7 +97,7 @@ M.base = {
   SignColumn          = { bg = colors.line_bg },
   Special             = { fg = colors.orange },
   SpecialChar         = { fg = colors.gray },
-  SpecialComment      = { fg = colors.white1 },
+  SpecialComment      = { fg = colors.pink },
   SpecialKey          = { fg = colors.gray_punc, style = 'bold' },
   SpellBad            = { fg = colors.red_key_w, style = 'underline' },
   SpellCap            = { fg = colors.orange, style = 'underline' },
