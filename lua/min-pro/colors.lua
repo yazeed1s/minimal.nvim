@@ -3,7 +3,7 @@ return {
   bg = "#191B20",
   none = "#191B20",
   --16181D
-  dark          = '#252525',
+  dark          = '#181A1F',
   comment       = "#4D5264",
   popup_back    = '#181A1F',
   cursor_fg     = '#434A55',
@@ -13,7 +13,7 @@ return {
   diff_add      = '#8CD881',
   diff_change   = '#6CAEC0',
   cl_bg         = "#707891",
-  diff_text     = '#568BB4', 
+  diff_text     = '#568BB4',
   line_fg       = "#555B6C",
   line_bg       = "#1E2026",
   gutter_bg     = "#1E2026",
@@ -22,7 +22,7 @@ return {
   selection_fg  = "#495163",
   vsplit_fg     = "#cccccc",
   vsplit_bg     = "#21252D",
-  visual_select_bg = "#2B3141",
+  visual_select_bg = "#272932",
 
   red_key_w  = "#E85A84",
   red_err    = "#FF0000",
@@ -31,14 +31,16 @@ return {
   blue_type  = '#7EB7E6',
   black1     = "#272932",
   black      = "#181A1F",
-  white1     = "#ACACB0",
+  white1     = "#B0B3BB",
   white      = "#DFE0EA",
   gray_punc  = "#515669",
-  gray2      = "#555555",
+  gray2      = "#6E7380",
   gray1      = '#3e3e3e',
   gray       = "#21252D",
-  orange     = "#CD7D72",
-  pink       = "#E49BE4",
+  orange     = "#E0828D",
+  orange_wr  = "#E39A65",
+  pink       = "#D895C7",
   yellow     = "#E9BF67",
+
 
 }

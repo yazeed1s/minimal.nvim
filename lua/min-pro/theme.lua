@@ -16,7 +16,7 @@ M.base = {
   -----------------------------------------
   --        Editors settings
   -----------------------------------------
-  Boolean           = { fg = colors.white },
+  Boolean           = { fg = colors.comment },
 
   Character         = { fg = colors.yellow },
   ColorColumn       = { bg = colors.black1 },
@@ -27,8 +27,8 @@ M.base = {
   Cursor            = { fg = colors.yellow, bg = colors.bg },
   CursorColumn      = { fg = "NONE", bg = "NONE" },
   -- CursorIM = { fg = colors.cursor_fg, bg = colors.cursor_bg },
-  CursorLine        = { bg = colors.cl_bg },
-  CursorLineNr      = { fg = colors.cl_bg, style = 'bold' },
+  CursorLine        = { bg = colors.black1 },
+  CursorLineNr      = { fg = colors.white, bg = colors.gutter_bg , style = 'bold' },
 
   Debug             = { fg = colors.fg },
   Define            = { fg = colors.pink },
@@ -70,7 +70,7 @@ M.base = {
   MatchWord         = { style = 'underline' },
   MatchWordCur      = { style = 'underline' },
   ModeMsg           = { fg = colors.fg, bg = colors.bg },
-  MoreMsg           = { fg = colors.orange },
+  MoreMsg           = { fg = colors.orange_wr },
   MsgArea           = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
   MsgSeparator      = { fg = colors.fg, bg = colors.bg },
 
@@ -104,11 +104,11 @@ M.base = {
   SpellLocal        = { fg = colors.green, style = 'underline' },
   SpellRare         = { fg = colors.pink, style = 'underline' },
   Statement         = { fg = colors.red_key_w },
-  StatusLine        = { fg = colors.black, bg = colors.gray1 },
-  StatusLineNC      = { fg = colors.gray_punc, bg = colors.gray},
+  StatusLine        = { fg = colors.black, bg = colors.black },
+  StatusLineNC      = { fg = colors.gray_punc, bg = colors.black},
   StatusLineSeparator = { fg = colors.dark },
-  StatusLineTerm    = { fg = colors.comment, bg = colors.gray },
-  StatusLineTermNC  = { fg = colors.gray_punc, bg = colors.gray },
+  StatusLineTerm    = { fg = colors.comment, bg = colors.blac },
+  StatusLineTermNC  = { fg = colors.gray_punc, bg = colors.black },
   StorageClass      = { fg = colors.pink },
   String            = { fg = colors.orange },
   Structure         = { fg = colors.blue_type },
@@ -130,7 +130,7 @@ M.base = {
   Visual            = { fg = "NONE", bg = colors.visual_select_bg , style = 'bold'},
   VisualNOS         = { fg = colors.selection_fg , bg = colors.selection_bg },
 
-  WarningMsg        = { fg = colors.gray, bg = colors.orange },
+  WarningMsg        = { fg = colors.orange_wr, bg = colors.none },
   Whitespace        = { fg = colors.non_text },
   WildMenu          = { fg = colors.fg},
   lCursor           = { fg = colors.cursor_fg, bg = colors.cursor_bg },
@@ -275,18 +275,18 @@ M.plugins = {
   DiagnosticHint                    = { fg = colors.blue_type },
   DiagnosticError                   = { fg = colors.red_err },
   DiagnosticInfo                    = { fg = colors.yellow },
-  DiagnosticVirtualTextWarn         = { fg = colors.orange },
-  DiagnosticWarn                    = { fg = colors.orange },
+  DiagnosticVirtualTextWarn         = { fg = colors.orange_wr },
+  DiagnosticWarn                    = { fg = colors.orange_wr },
 
   DiagnosticFloatingError   = { fg = colors.red_err },
   DiagnosticFloatingHint    = { fg = colors.blue_type },
   DiagnosticFloatingInfo    = { fg = colors.yellow },
-  DiagnosticFloatingWarn    = { fg = colors.orange },
+  DiagnosticFloatingWarn    = { fg = colors.orange_wr },
 
   DiagnosticSignError       = { fg = colors.red_err, bg = colors.line_bg },
   DiagnosticSignHint        = { fg = colors.blue_type, bg = colors.line_bg },
   DiagnosticSignInfo        = { fg = colors.yellow, bg = colors.line_bg },
-  DiagnosticSignWarn        = { fg = colors.orange, bg = colors.line_bg },
+  DiagnosticSignWarn        = { fg = colors.orange_wr, bg = colors.line_bg },
 
   DiagnosticUnderlineError  = { style = 'underline' },
   DiagnosticUnderlineHint   = { style = 'underline' },
@@ -306,17 +306,17 @@ M.plugins = {
   LspDiagnosticsFloatingError       = { fg = colors.red_err }, -- Deprecated
   LspDiagnosticsFloatingHint        = { fg = colors.blue_type }, -- Deprecated
   LspDiagnosticsFloatingInformation = { fg = colors.yellow }, -- Deprecated
-  LspDiagnosticsFloatingWarning     = { fg = colors.orange }, -- Deprecated
+  LspDiagnosticsFloatingWarning     = { fg = colors.orange_wr }, -- Deprecated
   LspDiagnosticsHint                = { fg = colors.blue_type }, -- Deprecated
   LspDiagnosticsInformation         = { fg = colors.yellow }, -- Deprecated
   LspDiagnosticsSignHint            = { fg = colors.blue_type }, -- Deprecated
   LspDiagnosticsSignInformation     = { fg = colors.yellow }, -- Deprecated
-  LspDiagnosticsSignWarning         = { fg = colors.orange }, -- Deprecated
+  LspDiagnosticsSignWarning         = { fg = colors.orange_wr }, -- Deprecated
   LspDiagnosticsUnderlineError      = { style = 'underline' }, -- Deprecated
   LspDiagnosticsUnderlineHint       = { style = 'underline' }, -- Deprecated
   LspDiagnosticsUnderlineWarning    = { style = 'underline' }, -- Deprecated
-  LspDiagnosticsVirtualTextWarning  = { fg = colors.orange }, -- Deprecated
-  LspDiagnosticsWarning             = { fg = colors.orange }, -- Deprecated
+  LspDiagnosticsVirtualTextWarning  = { fg = colors.orange_wr }, -- Deprecated
+  LspDiagnosticsWarning             = { fg = colors.orange_wr }, -- Deprecated
   LspReferenceRead                  = { bg = colors.fg_gutter, style = 'bold' }, -- Deprecated
   LspReferenceText                  = { bg = colors.fg_gutter, style = 'bold' }, -- Deprecated
   LspReferenceWrite                 = { bg = colors.fg_gutter, style = 'bold' }, -- Deprecated
@@ -378,9 +378,9 @@ M.plugins = {
   -----------------------------------------
   --   Nvim-tree: github.com/kyazdani42/nvim-tree.lua
   -----------------------------------------
-  NvimTreeCursorLine    = { fg = colors.black, bg = colors.black },
+  NvimTreeCursorLine    = { fg = colors.white, bg = colors.black1 },
   NvimTreeExecFile      = { fg = colors.green },
-  NvimTreeFolderIcon    = { fg = colors.white1},
+  NvimTreeFolderIcon    = { fg = colors.comment},
   NvimTreeFolderName    = { fg = colors.white1},
   NvimTreeGitDeleted    = { fg = colors.red_err },
   NvimTreeGitDirty      = { fg = colors.diff_add },
@@ -390,7 +390,7 @@ M.plugins = {
   NvimTreeGitStaged     = { fg = colors.diff_add },
   NvimTreeImageFile     = { fg = colors.pink },
   NvimTreeIndentMarker  = { fg = colors.comment },
-  NvimTreeNormal        = { fg = colors.accent, bg = colors.black },
+  NvimTreeNormal        = { fg = colors.white1, bg = colors.black },
   NvimTreeOpenedFolderName = { fg = colors.white1, style = 'italic' },
   NvimTreeRootFolder    = { fg = colors.yellow, style = 'bold' },
   NvimTreeSpecialFile   = { fg = colors.orange },
@@ -402,17 +402,17 @@ M.plugins = {
   -----------------------------------------
   --    telescope: github.com/nvim-telescope/telescope.nvim
   -----------------------------------------
-  TelescopeBorder       = { fg = colors.gray2, bg = config.transparent_background and 'NONE' or colors.bg },
-  TelescopeMatching     = { fg = colors.orange },
-  TelescopePromptPrefix = { fg = colors.white },
-  TelescopeSelection    = { fg = colors.comment, bg = colors.gray },
+  TelescopeBorder       = { fg = colors.white, bg = config.transparent_background and 'NONE' or colors.bg },
+  TelescopeMatching     = { fg = colors.yellow },
+  TelescopePromptPrefix = { fg = colors.green_func },
+  TelescopeSelection    = { fg = colors.comment, bg = colors.black1 },
   -----------------------------------------
 
   -----------------------------------------
   -- https://github.com/folke/trouble.nvim
   -----------------------------------------
   -- TroubleTextInformation = { fg = colors.red, bg = colors.green},
-  TroubleFile = { fg = colors.black, bg = colors.white1}, -- the source file that has error
+  TroubleFile = { fg = colors.black, bg = colors.black1}, -- the source file that has error
   TroubleFoldIcon = { fg = colors.red_err, bg = colors.black1 }, -- fold icon color
   TroubleCount = { fg = colors.red_err, bg = colors.black},
   -- TroubleError = { fg = colors.red, bg = colors.green},
@@ -462,7 +462,7 @@ M.plugins = {
   -----------------------------------------
   TSAnnotation          = { fg = colors.yellow },
   TSAttribute           = { fg = colors.white },
-  TSBoolean             = { fg = colors.white},
+  TSBoolean             = { fg = colors.orange},
   TSCharacter           = { fg = colors.yellow },
   TSComment             = { fg = colors.comment, style = 'italic' },
   TSConditional         = { fg = colors.red_key_w},
@@ -473,7 +473,7 @@ M.plugins = {
   TSEmphasis            = { style = 'italic' },
   TSError               = { fg = colors.red_err, bg = colors.bg, style = 'bold' },
   TSException           = { fg = colors.white },
-  TSField               = { fg = colors.blue_type },
+  TSField               = { fg = colors.white },
   TSFloat               = { fg = colors.orange },
   TSFuncBuiltin         = { fg = colors.green_func },
   TSFuncMacro           = { fg = colors.blue_type },
@@ -507,7 +507,7 @@ M.plugins = {
   TSTagDelimiter        = { fg = colors.gray_punc },
   TSText                = { fg = colors.fg },
   TSTitle               = { fg = colors.white, style = 'bold' },
-  TSType                = { fg = colors.blue_type },
+  TSType                = { fg = colors.pink },
   TSTypeBuiltin         = { fg = colors.blue_type},
   TSURI                 = { fg = colors.yellow, style = 'underline' },
   TSUnderline           = { style = 'underline' },
