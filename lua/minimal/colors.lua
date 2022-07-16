@@ -42,5 +42,4 @@ return {
   pink       = "#D895C7",
   yellow     = "#E9D26C",
 
-
 }
