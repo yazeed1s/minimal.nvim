@@ -48,7 +48,7 @@ M.base = {
   ErrorMsg  = { fg = colors.gray, bg = colors.red_err, style = 'bold' },
   Exception = { fg = colors.white },
 
-  Float       = { fg = colors.orange },
+  Float       = { fg = colors.green_func},
   FloatBorder = { fg = colors.gray2, bg = "NONE" },
   FoldColumn  = { fg = colors.line_fg },
   Folded      = { fg = colors.white, bg = colors.gray },
@@ -74,21 +74,21 @@ M.base = {
   MsgArea       = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
   MsgSeparator  = { fg = colors.fg, bg = colors.bg },
 
-  NonText     = { fg = colors.non_text },
+  NonText     = { fg = colors.gray2 },
   Normal      = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
   NormalFloat = { bg = colors.dark },
-  NormalNC    = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
-  Number      = { fg = colors.yellow },
+  NormalNC    = { fg = colors.comment, bg = config.transparent_background and 'NONE' or colors.bg },
+  Number      = { fg = colors.red_key_w },
 
   Operator   = { fg = colors.white },
-  Pmenu      = { fg = colors.white1, bg = colors.gray },
+  Pmenu      = { fg = colors.white1, bg = colors.black },
   PmenuSbar  = { bg = colors.gray },
   PmenuSel   = { fg = colors.black, bg = colors.white },
   PmenuThumb = { bg = colors.white },
   PreCondit  = { fg = colors.pink },
   PreProc    = { fg = colors.blue_type },
 
-  Question     = { fg = colors.gray },
+  Question     = { fg = colors.green_func },
   QuickFixLine = { bg = colors.gray1 },
 
   Repeat = { fg = colors.red_key_w },
@@ -105,12 +105,12 @@ M.base = {
   SpellRare           = { fg = colors.pink, style = 'underline' },
   Statement           = { fg = colors.red_key_w },
   StatusLine          = { fg = colors.black, bg = colors.black },
-  StatusLineNC        = { fg = colors.gray_punc, bg = colors.black },
+  StatusLineNC        = { fg = colors.black, bg = colors.black },
   StatusLineSeparator = { fg = colors.dark },
   StatusLineTerm      = { fg = colors.green_func, bg = colors.blac },
   StatusLineTermNC    = { fg = colors.gray_punc, bg = colors.black },
   StorageClass        = { fg = colors.pink },
-  String              = { fg = colors.orange },
+  String              = { fg = colors.green_func },
   Structure           = { fg = colors.blue_type },
   Substitute          = { fg = colors.gray2, bg = colors.orange },
 
@@ -202,10 +202,10 @@ M.plugins = {
   CmpDocumentationBorder = { fg = colors.white1, bg = colors.none },
   CmpItemAbbr            = { fg = colors.fg, bg = colors.none },
   CmpItemAbbrDeprecated  = { fg = colors.white1, bg = colors.none },
-  CmpItemAbbrMatch       = { fg = colors.white1, bg = colors.none },
-  CmpItemAbbrMatchFuzzy  = { fg = colors.white1, bg = colors.none },
+  CmpItemAbbrMatch       = { fg = colors.blue_type, bg = colors.none },
+  CmpItemAbbrMatchFuzzy  = { fg = colors.blue_type, bg = colors.none },
   CmpItemKind            = { fg = colors.green_func, bg = colors.none },
-  CmpItemMenu            = { fg = colors.black, bg = colors.none },
+  CmpItemMenu            = { fg = colors.pink, bg = colors.none },
   -----------------------------------------
 
 
@@ -378,7 +378,7 @@ M.plugins = {
   -----------------------------------------
   --   Nvim-tree: github.com/kyazdani42/nvim-tree.lua
   -----------------------------------------
-  NvimTreeCursorLine       = { fg = colors.white, bg = colors.black1 },
+  NvimTreeCursorLine       = { fg = colors.comment, bg = colors.black1 },
   NvimTreeExecFile         = { fg = colors.green },
   NvimTreeFolderIcon       = { fg = colors.comment },
   NvimTreeFolderName       = { fg = colors.white1 },
@@ -389,13 +389,13 @@ M.plugins = {
   NvimTreeGitRenamed       = { fg = colors.diff_change },
   NvimTreeGitStaged        = { fg = colors.diff_add },
   NvimTreeImageFile        = { fg = colors.pink },
-  NvimTreeIndentMarker     = { fg = colors.green_func },
+  NvimTreeIndentMarker     = { fg = colors.comment },
   NvimTreeNormal           = { fg = colors.white1, bg = colors.black },
   NvimTreeOpenedFolderName = { fg = colors.white1, style = 'italic' },
   NvimTreeRootFolder       = { fg = colors.yellow, style = 'bold' },
   NvimTreeSpecialFile      = { fg = colors.orange },
   NvimTreeSymlink          = { fg = colors.yellow },
-  NvimTreeVertSplit        = { fg = colors.gray1 },
+  NvimTreeVertSplit        = { fg = colors.black },
   -----------------------------------------
 
 
@@ -412,8 +412,8 @@ M.plugins = {
   -- https://github.com/folke/trouble.nvim
   -----------------------------------------
   -- TroubleTextInformation = { fg = colors.red, bg = colors.green},
-  TroubleFile = { fg = colors.black, bg = colors.black1 }, -- the source file that has error
-  TroubleFoldIcon = { fg = colors.red_err, bg = colors.black1 }, -- fold icon color
+  TroubleFile = { fg = colors.yellow, bg = colors.black }, -- the source file that has error
+  TroubleFoldIcon = { fg = colors.red_key_w, bg = colors.black }, -- fold icon color
   TroubleCount = { fg = colors.red_err, bg = colors.black },
   -- TroubleError = { fg = colors.red, bg = colors.green},
 
@@ -466,7 +466,7 @@ M.plugins = {
   TSCharacter          = { fg = colors.yellow },
   TSComment            = { fg = colors.comment, style = 'italic' },
   TSConditional        = { fg = colors.red_key_w },
-  TSConstBuiltin       = { fg = colors.pink },
+  TSConstBuiltin       = { fg = colors.orange },
   TSConstMacro         = { fg = colors.white },
   TSConstant           = { fg = colors.white },
   TSConstructor        = { fg = colors.white },
@@ -490,8 +490,8 @@ M.plugins = {
   TSNumber             = { fg = colors.orange },
   TSOperator           = { fg = colors.red_key_w },
   TSParameter          = { fg = colors.white },
-  TSParameterReference = { fg = colors.blue_type },
-  TSProperty           = { fg = colors.blue_type },
+  TSParameterReference = { fg = colors.white },
+  TSProperty           = { fg = colors.white },
   TSPunctBracket       = { fg = colors.gray_punc },
   TSPunctDelimiter     = { fg = colors.gray_punc },
   TSPunctSpecial       = { fg = colors.gray_punc },
@@ -502,7 +502,7 @@ M.plugins = {
   TSStringRegex        = { fg = colors.yellow },
   TSStrong             = { fg = colors.yellow },
   TSStructure          = { fg = colors.red_key_w },
-  TSSymbol             = { fg = colors.blue_type },
+  TSSymbol             = { fg = colors.white },
   TSTag                = { fg = colors.red_key_w },
   TSTagDelimiter       = { fg = colors.gray_punc },
   TSText               = { fg = colors.fg },
