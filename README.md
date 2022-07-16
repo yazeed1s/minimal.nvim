@@ -3,24 +3,24 @@
 Two [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter) supported colorschemes ispired by base16-tomorrow-night and monokai pro.\
 Both colorschemes are availaible for vim and neovim and written in Lua.
 
-### Note
+### 📌 Note:
 Both colors are designed carefully for both Go and Rust, and tested against few other languages.\
 If any of the colors does not syntax-highlight your langauge satisfactorily, please feel free to fork the repo and do changes as needed  
 
-## [minimal-base16]
+## ⭐️ [minimal-base16]
    ![screenshot_1](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--1.png)
    ![screenshot_2](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--2.png)
    ![screenshot_3](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--3.png)
    ![screenshot_4](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--4.png)
 
-## [minimal-base16]
+## ⚡️ [minimal]
    ![screenshot_1](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--1.png)
    ![screenshot_2](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--2.png)
    ![screenshot_3](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--3.png)
    ![screenshot_4](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--4.png)
 
 
-## Plugin Support
+## ✅ Plugin Support
 
 - [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
@@ -35,7 +35,7 @@ If any of the colors does not syntax-highlight your langauge satisfactorily, ple
 - [Barbar](https://github.com/romgrk/barbar.nvim)
 - and more...
 
-## ⚡️ Requirements
+## 👇 Requirements
 
 - Neovim >= 0.5.0
 
@@ -62,13 +62,16 @@ Enable the colorscheme:
 ```vim
 " Vim Script
 colorscheme minimal " for minimal
-colorscheme minimal-16 " for minimal-16
+colorscheme minimal-base16 " for minimal-base16
 ```
 
 ```lua
 -- Lua
 vim.cmd[[colorscheme minimal]] -- for minimal
-vim.cmd[[colorscheme minimal-16]] -- for minimal16
+vim.cmd[[colorscheme minimal-base16]] -- for minimal-base16
+-- or, for lunarVim
+lvim.colorscheme = 'minimal'
+lvim.colorscheme = 'minimal-base16'
 ```
 
 ## 🔥 Contributing
