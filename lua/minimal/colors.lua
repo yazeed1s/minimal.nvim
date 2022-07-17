@@ -17,7 +17,7 @@ return {
   line_fg          = "#555B6C",
   line_bg          = "#1E2026",
   gutter_bg        = "#1E2026",
-  non_text         = "#373C45",
+  non_text         = "#606978",
   selection_bg     = "#5E697E",
   selection_fg     = "#495163",
   vsplit_fg        = "#cccccc",
