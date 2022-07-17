@@ -65,7 +65,7 @@ M.base = {
   LineNr = { fg = colors.line_fg, bg = colors.line_bg },
 
   Macro         = { fg = colors.pink },
-  MatchParen    = { fg = colors.white1, bg = colors.white1 },
+  MatchParen    = { fg = colors.white1, bg = colors.black },
   MatchParenCur = { style = 'underline' },
   MatchWord     = { style = 'underline' },
   MatchWordCur  = { style = 'underline' },
@@ -83,8 +83,8 @@ M.base = {
   Operator   = { fg = colors.white },
   Pmenu      = { fg = colors.white1, bg = colors.black },
   PmenuSbar  = { bg = colors.gray },
-  PmenuSel   = { fg = colors.black, bg = colors.white },
-  PmenuThumb = { bg = colors.white },
+  PmenuSel   = { fg = colors.line_fg, bg = colors.black },
+  PmenuThumb = { bg = colors.black },
   PreCondit  = { fg = colors.pink },
   PreProc    = { fg = colors.blue_type },
 
@@ -104,10 +104,10 @@ M.base = {
   SpellLocal          = { fg = colors.green, style = 'underline' },
   SpellRare           = { fg = colors.pink, style = 'underline' },
   Statement           = { fg = colors.red_key_w },
-  StatusLine          = { fg = colors.black, bg = colors.black },
-  StatusLineNC        = { fg = colors.black, bg = colors.black },
+  StatusLine          = { fg = colors.line_fg, bg = colors.black },
+  StatusLineNC        = { fg = colors.line_fg, bg = colors.black },
   StatusLineSeparator = { fg = colors.dark },
-  StatusLineTerm      = { fg = colors.green_func, bg = colors.blac },
+  StatusLineTerm      = { fg = colors.green_func, bg = colors.black },
   StatusLineTermNC    = { fg = colors.gray_punc, bg = colors.black },
   StorageClass        = { fg = colors.pink },
   String              = { fg = colors.green_func },
@@ -259,7 +259,7 @@ M.plugins = {
 
 
   -----------------------------------------
-  --    Indent-blankline: github.com/lukas-reineke/indent-blankline.nvim
+  --  Indent-blankline: github.com/lukas-reineke/indent-blankline.nvim
   -----------------------------------------
   IndentBlanklineChar               = { fg = colors.black1 },
   IndentBlanklineContextChar        = { fg = colors.gray2 },
@@ -378,8 +378,8 @@ M.plugins = {
   -----------------------------------------
   --   Nvim-tree: github.com/kyazdani42/nvim-tree.lua
   -----------------------------------------
-  NvimTreeFolderIcon       = {fg = colors.orange, },
-	NvimTreeEmptyFolderName  = {fg = colors.yellow, style = "italic" },
+  NvimTreeFolderIcon       = { fg = colors.orange },
+	NvimTreeEmptyFolderName  = { fg = colors.yellow, style = "italic" },
   NvimTreeCursorLine       = { fg = colors.comment, bg = colors.black1 },
   NvimTreeExecFile         = { fg = colors.green },
   NvimTreeFolderIcon       = { fg = colors.comment },
@@ -393,13 +393,14 @@ M.plugins = {
   NvimTreeImageFile        = { fg = colors.pink },
   NvimTreeIndentMarker     = { fg = colors.comment },
   NvimTreeNormal           = { fg = colors.white1, bg = colors.black },
+  NvimTreeNormalNC         = { bg = colors.black },
   NvimTreeOpenedFolderName = { fg = colors.white1, style = 'italic' },
   NvimTreeRootFolder       = { fg = colors.yellow, style = 'bold' },
   NvimTreeSpecialFile      = { fg = colors.orange },
   NvimTreeSymlink          = { fg = colors.yellow },
   NvimTreeVertSplit        = { fg = colors.black },
+  NvimTreeEndOfBuffer      = { fg = colors.bg },
   -----------------------------------------
-
 
   -----------------------------------------
   --    telescope: github.com/nvim-telescope/telescope.nvim
