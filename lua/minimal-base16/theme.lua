@@ -399,7 +399,7 @@ M.plugins = {
   NvimTreeSpecialFile      = { fg = colors.orange },
   NvimTreeSymlink          = { fg = colors.yellow },
   NvimTreeVertSplit        = { fg = colors.black },
-  NvimTreeEndOfBuffer      = { fg = colors.bg },
+  NvimTreeEndOfBuffer      = { fg = colors.non_text },
   -----------------------------------------
 
   -----------------------------------------
