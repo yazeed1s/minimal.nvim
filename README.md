@@ -8,7 +8,7 @@ Both colorschemes are availaible for vim and neovim and written in Lua.
 
 - support the latest Neovim >=5.0 features like TreeSitter and LSP
 - darker background for sidebar
-- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
+- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty). Created by [miguelaht](https://github.com/miguelaht).
 
 
 ## 📌 Note:
