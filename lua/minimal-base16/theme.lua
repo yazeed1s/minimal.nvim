@@ -378,6 +378,8 @@ M.plugins = {
   -----------------------------------------
   --   Nvim-tree: github.com/kyazdani42/nvim-tree.lua
   -----------------------------------------
+  NvimTreeFolderIcon       = {fg = colors.orange, },
+	NvimTreeEmptyFolderName  = {fg = colors.yellow, style = "italic" },
   NvimTreeCursorLine       = { fg = colors.comment, bg = colors.black1 },
   NvimTreeExecFile         = { fg = colors.green },
   NvimTreeFolderIcon       = { fg = colors.comment },
