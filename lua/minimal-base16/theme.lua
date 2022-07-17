@@ -86,7 +86,7 @@ M.base = {
   PmenuSel   = { fg = colors.line_fg, bg = colors.black },
   PmenuThumb = { bg = colors.black },
   PreCondit  = { fg = colors.pink },
-  PreProc    = { fg = colors.blue_type },
+  PreProc    = { fg = colors.blue_func },
 
   Question     = { fg = colors.green_func },
   QuickFixLine = { bg = colors.gray1 },
@@ -111,7 +111,7 @@ M.base = {
   StatusLineTermNC    = { fg = colors.gray_punc, bg = colors.black },
   StorageClass        = { fg = colors.pink },
   String              = { fg = colors.green_func },
-  Structure           = { fg = colors.blue_type },
+  Structure           = { fg = colors.blue_func },
   Substitute          = { fg = colors.gray2, bg = colors.orange },
 
   TabLine      = { fg = colors.gray_punc },
@@ -122,8 +122,8 @@ M.base = {
   TermCursorNC = { fg = colors.cursor_fg, bg = colors.cursor_bg },
   Title        = { fg = colors.gray_punc },
   Todo         = { fg = colors.yellow, style = 'bold' },
-  Type         = { fg = colors.blue_type },
-  Typedef      = { fg = colors.blue_type },
+  Type         = { fg = colors.blue_func },
+  Typedef      = { fg = colors.blue_func },
 
   Variable  = { fg = colors.white },
   VertSplit = { fg = colors.vsplit_bg },
@@ -179,7 +179,7 @@ M.plugins = {
   BufferCurrent        = { fg = colors.fg, bg = colors.gray },
   BufferCurrentIndex   = { fg = colors.fg, bg = colors.bg },
   BufferCurrentMod     = { fg = colors.yellow, bg = colors.bg },
-  BufferCurrentSign    = { fg = colors.blue_type, bg = colors.bg },
+  BufferCurrentSign    = { fg = colors.blue_func, bg = colors.bg },
   BufferCurrentTarget  = { fg = colors.red_key_w, bg = colors.bg, style = 'bold' },
   BufferInactive       = { fg = colors.gray2, bg = colors.dark },
   BufferInactiveIndex  = { fg = colors.gray2, bg = colors.dark },
@@ -202,8 +202,8 @@ M.plugins = {
   CmpDocumentationBorder = { fg = colors.white1, bg = colors.none },
   CmpItemAbbr            = { fg = colors.fg, bg = colors.none },
   CmpItemAbbrDeprecated  = { fg = colors.white1, bg = colors.none },
-  CmpItemAbbrMatch       = { fg = colors.blue_type, bg = colors.none },
-  CmpItemAbbrMatchFuzzy  = { fg = colors.blue_type, bg = colors.none },
+  CmpItemAbbrMatch       = { fg = colors.blue_func, bg = colors.none },
+  CmpItemAbbrMatchFuzzy  = { fg = colors.blue_func, bg = colors.none },
   CmpItemKind            = { fg = colors.green_func, bg = colors.none },
   CmpItemMenu            = { fg = colors.pink, bg = colors.none },
   -----------------------------------------
@@ -272,19 +272,19 @@ M.plugins = {
   --   Lsp: neovim.io/doc/user/lsp.html
   -----------------------------------------
   DiagnosticVirtualTextInfo = { fg = colors.yellow },
-  DiagnosticHint            = { fg = colors.blue_type },
+  DiagnosticHint            = { fg = colors.blue_func },
   DiagnosticError           = { fg = colors.red_err },
   DiagnosticInfo            = { fg = colors.yellow },
   DiagnosticVirtualTextWarn = { fg = colors.orange_wr },
   DiagnosticWarn            = { fg = colors.orange_wr },
 
   DiagnosticFloatingError = { fg = colors.red_err },
-  DiagnosticFloatingHint  = { fg = colors.blue_type },
+  DiagnosticFloatingHint  = { fg = colors.blue_func },
   DiagnosticFloatingInfo  = { fg = colors.yellow },
   DiagnosticFloatingWarn  = { fg = colors.orange_wr },
 
   DiagnosticSignError = { fg = colors.red_err, bg = colors.line_bg },
-  DiagnosticSignHint  = { fg = colors.blue_type, bg = colors.line_bg },
+  DiagnosticSignHint  = { fg = colors.blue_func, bg = colors.line_bg },
   DiagnosticSignInfo  = { fg = colors.yellow, bg = colors.line_bg },
   DiagnosticSignWarn  = { fg = colors.orange_wr, bg = colors.line_bg },
 
@@ -301,15 +301,15 @@ M.plugins = {
   -----------------------------------------
   --   LspDiagnostics:
   -----------------------------------------
-  LspDiagnosticsDefaultHint            = { fg = colors.blue_type }, -- Deprecated
+  LspDiagnosticsDefaultHint            = { fg = colors.blue_func }, -- Deprecated
   LspDiagnosticsError                  = { fg = colors.red_err }, -- Deprecated
   LspDiagnosticsFloatingError          = { fg = colors.red_err }, -- Deprecated
-  LspDiagnosticsFloatingHint           = { fg = colors.blue_type }, -- Deprecated
+  LspDiagnosticsFloatingHint           = { fg = colors.blue_func }, -- Deprecated
   LspDiagnosticsFloatingInformation    = { fg = colors.yellow }, -- Deprecated
   LspDiagnosticsFloatingWarning        = { fg = colors.orange_wr }, -- Deprecated
-  LspDiagnosticsHint                   = { fg = colors.blue_type }, -- Deprecated
+  LspDiagnosticsHint                   = { fg = colors.blue_func }, -- Deprecated
   LspDiagnosticsInformation            = { fg = colors.yellow }, -- Deprecated
-  LspDiagnosticsSignHint               = { fg = colors.blue_type }, -- Deprecated
+  LspDiagnosticsSignHint               = { fg = colors.blue_func }, -- Deprecated
   LspDiagnosticsSignInformation        = { fg = colors.yellow }, -- Deprecated
   LspDiagnosticsSignWarning            = { fg = colors.orange_wr }, -- Deprecated
   LspDiagnosticsUnderlineError         = { style = 'underline' }, -- Deprecated
@@ -465,54 +465,54 @@ M.plugins = {
   -----------------------------------------
   TSAnnotation         = { fg = colors.yellow },
   TSAttribute          = { fg = colors.white },
-  TSBoolean            = { fg = colors.orange },
+  TSBoolean            = { fg = colors.cyan },
   TSCharacter          = { fg = colors.yellow },
   TSComment            = { fg = colors.comment, style = 'italic' },
-  TSConditional        = { fg = colors.red_key_w },
-  TSConstBuiltin       = { fg = colors.orange },
-  TSConstMacro         = { fg = colors.white },
-  TSConstant           = { fg = colors.white },
-  TSConstructor        = { fg = colors.white },
+  TSConditional        = { fg = colors.pink },
+  TSConstBuiltin       = { fg = colors.cyan },
+  TSConstMacro         = { fg = colors.cyan },
+  TSConstant           = { fg = colors.cyan },
+  TSConstructor        = { fg = colors.cyan },
   TSEmphasis           = { style = 'italic' },
   TSError              = { fg = colors.red_err, bg = colors.bg, style = 'bold' },
   TSException          = { fg = colors.white },
   TSField              = { fg = colors.white },
   TSFloat              = { fg = colors.orange },
-  TSFuncBuiltin        = { fg = colors.green_func },
-  TSFuncMacro          = { fg = colors.blue_type },
-  TSFunction           = { fg = colors.green_func },
-  TSInclude            = { fg = colors.red_key_w },
-  TSKeyword            = { fg = colors.red_key_w },
-  TSKeywordFunction    = { fg = colors.red_key_w },
-  TSKeywordOperator    = { fg = colors.red_key_w },
-  TSKeywordReturn      = { fg = colors.red_key_w },
-  TSLabel              = { fg = colors.white },
+  TSFuncBuiltin        = { fg = colors.blue_func },
+  TSFuncMacro          = { fg = colors.red_key_w },
+  TSFunction           = { fg = colors.blue_func },
+  TSInclude            = { fg = colors.pink },
+  TSKeyword            = { fg = colors.pink },
+  TSKeywordFunction    = { fg = colors.pink },
+  TSKeywordOperator    = { fg = colors.pink },
+  TSKeywordReturn      = { fg = colors.pink },
+  TSLabel              = { fg = colors.cyan },
   TSLiteral            = { fg = colors.yellow },
-  TSMethod             = { fg = colors.red_key_w },
-  TSNamespace          = { fg = colors.blue_type },
+  TSMethod             = { fg = colors.blue_func },
+  TSNamespace          = { fg = colors.yellow },
   TSNumber             = { fg = colors.orange },
   TSOperator           = { fg = colors.red_key_w },
   TSParameter          = { fg = colors.white },
   TSParameterReference = { fg = colors.white },
   TSProperty           = { fg = colors.white },
-  TSPunctBracket       = { fg = colors.gray_punc },
-  TSPunctDelimiter     = { fg = colors.gray_punc },
-  TSPunctSpecial       = { fg = colors.gray_punc },
+  TSPunctBracket       = { fg = colors.white1 },
+  TSPunctDelimiter     = { fg = colors.white1 },
+  TSPunctSpecial       = { fg = colors.red_key_w },
   TSQueryLinterError   = { fg = colors.red_err },
-  TSRepeat             = { fg = colors.red_key_w },
-  TSString             = { fg = colors.yellow },
+  TSRepeat             = { fg = colors.pink },
+  TSString             = { fg = colors.green_func },
   TSStringEscape       = { fg = colors.green },
-  TSStringRegex        = { fg = colors.yellow },
+  TSStringRegex        = { fg = colors.green_func },
   TSStrong             = { fg = colors.yellow },
-  TSStructure          = { fg = colors.red_key_w },
+  TSStructure          = { fg = colors.pink },
   TSSymbol             = { fg = colors.white },
-  TSTag                = { fg = colors.red_key_w },
+  TSTag                = { fg = colors.pink },
   TSTagDelimiter       = { fg = colors.gray_punc },
   TSText               = { fg = colors.fg },
   TSTitle              = { fg = colors.white, style = 'bold' },
-  TSType               = { fg = colors.pink },
-  TSTypeBuiltin        = { fg = colors.blue_type },
-  TSURI                = { fg = colors.yellow, style = 'underline' },
+  TSType               = { fg = colors.red_key_w },
+  TSTypeBuiltin        = { fg = colors.yellow },
+  TSURI                = { fg = colors.green_func, style = 'underline' },
   TSUnderline          = { style = 'underline' },
   TSVariable           = { fg = colors.white },
   TSVariableBuiltin    = { fg = colors.white },
