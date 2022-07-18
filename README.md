@@ -32,6 +32,8 @@ If any of the colors does not syntax-highlight your langauge satisfactorily, ple
 
 - [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [Startify](https://github.com/mhinz/vim-startify)
 - [Dashboard](https://github.com/glepnir/dashboard-nvim)
 - [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
 - [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
@@ -85,7 +87,8 @@ lvim.colorscheme = 'minimal-base16'
 Color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty) can be found in [terminal](terminal). If you want to use them, pleas refer to their respective documentation and do changes to your `.config/` accordingly 
 
 ## ✅ TODO: 
-- [ ] Add color support for [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [x] Add color support for [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [x] Add color support for [startify](https://github.com/mhinz/vim-startify)
 - [ ] Add themes to statusLine plugins such as [feline](https://github.com/feline-nvim/feline.nvim) and [lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ## 🔥 Contributing
