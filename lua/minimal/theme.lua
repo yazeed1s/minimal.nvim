@@ -16,14 +16,14 @@ M.base = {
   -----------------------------------------
   --        Editors settings
   -----------------------------------------
-  Boolean = { fg = colors.green_func },
+  Boolean = { fg = colors.orange },
 
   Character    = { fg = colors.yellow },
   ColorColumn  = { bg = colors.black1 },
   Comment      = { fg = colors.comment, style = 'italic' },
   Conceal      = { fg = colors.fg }, -- {bg = config.transparent_background and 'NONE' or colors.bg },
   Conditional  = { fg = colors.red_key_w },
-  Constant     = { fg = colors.white },
+  Constant     = { fg = colors.pink },
   Cursor       = { fg = colors.yellow, bg = colors.bg },
   CursorColumn = { fg = "NONE", bg = "NONE" },
   -- CursorIM = { fg = colors.cursor_fg, bg = colors.cursor_bg },
@@ -31,7 +31,7 @@ M.base = {
   CursorLineNr = { fg = colors.white, bg = colors.gutter_bg, style = 'bold' },
 
   Debug       = { fg = colors.fg },
-  Define      = { fg = colors.pink },
+  Define      = { fg = colors.red_key_w },
   Delimiter   = { fg = colors.gray_punc },
   DiffAdd     = { fg = colors.green_func },
   DiffAdded   = { fg = colors.green_func },
@@ -48,7 +48,7 @@ M.base = {
   ErrorMsg  = { fg = colors.gray, bg = colors.red_err, style = 'bold' },
   Exception = { fg = colors.white },
 
-  Float       = { fg = colors.green_func},
+  Float       = { fg = colors.orange},
   FloatBorder = { fg = colors.gray2, bg = "NONE" },
   FoldColumn  = { fg = colors.line_fg },
   Folded      = { fg = colors.white, bg = colors.gray },
@@ -64,7 +64,7 @@ M.base = {
   Label  = { fg = colors.red_key_w },
   LineNr = { fg = colors.line_fg, bg = colors.line_bg },
 
-  Macro         = { fg = colors.pink },
+  Macro         = { fg = colors.red_key_w },
   MatchParen    = { fg = colors.white1, bg = colors.black },
   MatchParenCur = { style = 'underline' },
   MatchWord     = { style = 'underline' },
@@ -78,25 +78,25 @@ M.base = {
   Normal      = { fg = colors.fg, bg = config.transparent_background and 'NONE' or colors.bg },
   NormalFloat = { bg = colors.dark },
   NormalNC    = { fg = colors.white, bg = config.transparent_background and 'NONE' or colors.bg },
-  Number      = { fg = colors.red_key_w },
+  Number      = { fg = colors.orange },
 
   Operator   = { fg = colors.white },
   Pmenu      = { fg = colors.white1, bg = colors.black },
   PmenuSbar  = { bg = colors.gray },
   PmenuSel   = { fg = colors.line_fg, bg = colors.black },
   PmenuThumb = { bg = colors.black },
-  PreCondit  = { fg = colors.pink },
+  PreCondit  = { fg = colors.blue_type },
   PreProc    = { fg = colors.blue_type },
 
   Question     = { fg = colors.green_func },
-  QuickFixLine = { bg = colors.gray1 },
+  QuickFixLine = { bg = colors.orange_wr },
 
   Repeat = { fg = colors.red_key_w },
 
   Search              = { fg = colors.bg, bg = colors.orange },
   SignColumn          = { bg = colors.line_bg },
   Special             = { fg = colors.orange },
-  SpecialChar         = { fg = colors.gray },
+  SpecialChar         = { fg = colors.yellow },
   SpecialComment      = { fg = colors.pink },
   SpecialKey          = { fg = colors.gray_punc, style = 'bold' },
   SpellBad            = { fg = colors.red_key_w, style = 'underline' },
@@ -109,9 +109,9 @@ M.base = {
   StatusLineSeparator = { fg = colors.dark },
   StatusLineTerm      = { fg = colors.green_func, bg = colors.black },
   StatusLineTermNC    = { fg = colors.gray_punc, bg = colors.black },
-  StorageClass        = { fg = colors.pink },
-  String              = { fg = colors.green_func },
-  Structure           = { fg = colors.blue_type },
+  StorageClass        = { fg = colors.red_key_w },
+  String              = { fg = colors.yellow },
+  Structure           = { fg = colors.green_func },
   Substitute          = { fg = colors.gray2, bg = colors.orange },
 
   TabLine      = { fg = colors.gray_punc },
@@ -212,9 +212,9 @@ M.plugins = {
   -----------------------------------------
   --    Dashboard: github.com/glepnir/dashboard-nvim
   -----------------------------------------
-  DashboardCenter = { fg = colors.pink },
+  DashboardCenter = { fg = colors.white },
   DashboardFooter = { fg = colors.yellow },
-  DashboardHeader = { fg = colors.yellow },
+  DashboardHeader = { fg = colors.green_func},
   -----------------------------------------
 
 
@@ -297,6 +297,54 @@ M.plugins = {
   DiagnosticVirtualTextHint  = { fg = colors.gray2 },
   -----------------------------------------
 
+-----------------------------------------
+  -- NerdTree: github.com/preservim/nerdtree
+  -----------------------------------------
+  Directory               = { fg = colors.white },
+  NERDTreeUp              = { fg = colors.yellow },
+  NERDTreeDir             = { fg = colors.blue_type },
+  NERDTreeOpenable        = { fg = colors.comment },
+  NERDTreeClosable        = { fg = colors.red_key_w },
+  NERDTreeIgnore          = { fg = colors.comment },
+  NERDTreeHelpKey         = { fg = colors.white },
+  NERDTreeHelpTitle       = { fg = colors.pink },
+  NERDTreeToggleOn        = { fg = colors.green_func },
+  NERDTreeToggleOff       = { fg = colors.orange },
+  NERDTreeHelpCommand     = { fg = colors.yellow },
+  NERDTreeFile            = { fg = colors.white },
+  NERDTreeLinkTarget      = { fg = colors.blue_type },
+  NERDTreeLinkFile        = { fg = colors.green_func },
+  NERDTreeLinkDir         = { fg = colors.pink },
+  NERDTreeNodeDelimiters  = { fg = colors.comment },
+  NERDTreeDirSlash        = { fg = colors.comment },
+  NERDTreeExecFile        = { fg = colors.green_func },
+  NERDTreeRO              = { fg = colors.orange },
+  NERDTreeBookmarkName    = { fg = colors.orange },
+  NERDTreeFlags           = { fg = colors.red_key_w },
+  NERDTreeCWD             = { fg = colors.red_key_w },
+  NERDTreeBookmarksLeader = { fg = colors.blue_type },
+  NERDTreeBookmarksHeader = { fg = colors.red_key_w },
+  NERDTreeBookmark        = { fg = colors.orange },
+  NERDTreePart            = { fg = colors.orange },
+  NERDTreePartFile        = { fg = colors.blue_type },
+  NERDTreeCurrentNode     = { fg = colors.comment },
+
+
+  -----------------------------------------
+  -- Startify: github.com/mhinz/vim-startify
+  -----------------------------------------
+  StartifyEndOfBuffer        = { fg = colors.non_text },
+  StartifyNumber             = { fg = colors.red_key_w },
+  StartifySelect             = { fg = colors.comment },
+  StartifyBracket            = { fg = colors.white },
+  StartifySpecial            = { fg = colors.yellow },
+  StartifyVar                = { fg = colors.comment },
+  StartifyPath               = { fg = colors.comment },
+  StartifyFile               = { fg = colors.blue_type },
+  StartifySlash              = { fg = colors.comment },
+  StartifyHeader             = { fg = colors.blue_type },
+  StartifyFooter             = { fg = colors.pink },
+  StartifySection            = { fg = colors.pink },
 
   -----------------------------------------
   --   LspDiagnostics:
