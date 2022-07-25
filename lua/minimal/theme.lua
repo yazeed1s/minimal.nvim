@@ -31,7 +31,7 @@ M.base = {
   CursorLineNr = { fg = colors.white, bg = colors.gutter_bg, style = 'bold' },
 
   Debug       = { fg = colors.fg },
-  Define      = { fg = colors.red_key_w },
+  Define      = { fg = colors.blue_type },
   Delimiter   = { fg = colors.gray_punc },
   DiffAdd     = { fg = colors.green_func },
   DiffAdded   = { fg = colors.green_func },
@@ -57,7 +57,7 @@ M.base = {
   Identifier = { fg = colors.white1 },
   Ignore     = { fg = colors.gray_punc },
   IncSearch  = { fg = colors.bg, bg = colors.orange },
-  Include    = { fg = colors.red_key_w },
+  Include    = { fg = colors.blue_type },
 
   Keyword = { fg = colors.red_key_w },
 
@@ -89,15 +89,15 @@ M.base = {
   PreProc    = { fg = colors.blue_type },
 
   Question     = { fg = colors.green_func },
-  QuickFixLine = { bg = colors.orange_wr },
+  QuickFixLine = { fg = colors.orange_wr },
 
   Repeat = { fg = colors.red_key_w },
 
-  Search              = { fg = colors.bg, bg = colors.orange },
+  Search              = { fg = colors.line_fg, bg = colors.orange },
   SignColumn          = { bg = colors.line_bg },
-  Special             = { fg = colors.orange },
+  Special             = { fg = colors.gray_punc },
   SpecialChar         = { fg = colors.yellow },
-  SpecialComment      = { fg = colors.pink },
+  SpecialComment      = { fg = colors.comment },
   SpecialKey          = { fg = colors.gray_punc, style = 'bold' },
   SpellBad            = { fg = colors.red_key_w, style = 'underline' },
   SpellCap            = { fg = colors.orange, style = 'underline' },
@@ -114,8 +114,8 @@ M.base = {
   Structure           = { fg = colors.green_func },
   Substitute          = { fg = colors.gray2, bg = colors.orange },
 
-  TabLine      = { fg = colors.gray_punc },
-  TabLineFill  = { fg = colors.gray_punc },
+  TabLine      = { fg = colors.line_fg },
+  TabLineFill  = { fg = colors.line_fg },
   TabLineSel   = { fg = colors.fg },
   Tag          = { fg = colors.gray_punc },
   TermCursor   = { fg = colors.cursor_fg, bg = colors.cursor_bg },
@@ -195,17 +195,36 @@ M.plugins = {
   -----------------------------------------
 
 
+  WhichKey = {fg = colors.blue_type, },
+	WhichKeySeperator = {fg = colors.red_key_w, },
+	WhichKeyGroup = {fg = colors.pink },
+	WhichKeyDesc = {fg = colors.white },
+	WhichKeyFloat = {bg = colors.dark },
+
   -----------------------------------------
   --   Cmp:    github.com/hrsh7th/nvim-cmp
   -----------------------------------------
-  CmpDocumentation       = { fg = colors.fg, bg = colors.none },
-  CmpDocumentationBorder = { fg = colors.white1, bg = colors.none },
-  CmpItemAbbr            = { fg = colors.fg, bg = colors.none },
-  CmpItemAbbrDeprecated  = { fg = colors.white1, bg = colors.none },
-  CmpItemAbbrMatch       = { fg = colors.blue_type, bg = colors.none },
-  CmpItemAbbrMatchFuzzy  = { fg = colors.blue_type, bg = colors.none },
-  CmpItemKind            = { fg = colors.green_func, bg = colors.none },
-  CmpItemMenu            = { fg = colors.pink, bg = colors.none },
+    CmpItemAbbrDeprecated  = { fg = colors.comment },
+  CmpDocumentation       = { fg = colors.fg},
+  CmpDocumentationBorder = { fg = colors.gray2},
+  CmpItemAbbr            = { fg = colors.fg},
+  CmpItemAbbrDeprecated  = { fg = colors.white1},
+  CmpItemAbbrMatch       = { fg = colors.blue_type},
+  CmpItemAbbrMatchFuzzy  = { fg = colors.blue_type},
+  CmpItemKind            = { fg = colors.green_func},
+  CmpItemKindMethod      = { fg = colors.blue_type},
+  CmpItemKindConstructor = { fg = colors.yellow},
+  CmpItemKindClass       = { fg = colors.red_key_w},
+  CmpItemKindVariabl     = { fg = colors.white },
+  CmpItemKindField       = { fg = colors.white },
+  CmpItemKindProperty    = { fg = colors.white },
+  CmpItemKindEnumMember  = { fg = colors.orange },
+	CmpItemKindConstant    = { fg = colors.orange },
+  CmpItemKindEnum        = { fg = colors.blue_type},
+  CmpItemKindStruct      = { fg = colors.blue_type},
+  CmpItemKindKeyword     = { fg = colors.pink },
+  CmpItemMenu            = { fg = colors.pink },
+  CmpItemKindOperator    = { fg = colors.red_key_w },
   -----------------------------------------
 
 
@@ -428,7 +447,7 @@ M.plugins = {
   -----------------------------------------
   NvimTreeFolderIcon       = { fg = colors.orange },
 	NvimTreeEmptyFolderName  = { fg = colors.yellow, style = "italic" },
-  NvimTreeCursorLine       = { fg = colors.comment, bg = colors.black1 },
+  NvimTreeCursorLine       = { fg = colors.line_fg, bg = colors.black1 },
   NvimTreeExecFile         = { fg = colors.green },
   NvimTreeFolderIcon       = { fg = colors.comment },
   NvimTreeFolderName       = { fg = colors.white1 },
@@ -462,36 +481,56 @@ M.plugins = {
   -----------------------------------------
   -- https://github.com/folke/trouble.nvim
   -----------------------------------------
-  -- TroubleTextInformation = { fg = colors.red, bg = colors.green},
-  TroubleFile = { fg = colors.yellow, bg = colors.black }, -- the source file that has error
-  TroubleFoldIcon = { fg = colors.red_key_w, bg = colors.black }, -- fold icon color
-  TroubleCount = { fg = colors.red_err, bg = colors.black },
-  -- TroubleError = { fg = colors.red, bg = colors.green},
+  -----------------------------------------
+  TroubleTextInformation = { fg = colors.blue_type},
+  TroubleFile = { fg = colors.yellow}, -- the source file that has error
+  TroubleFoldIcon = { fg = colors.blue_type}, -- fold icon color
+  TroubleCount = { fg = colors.red_key_w},
+  TroubleError = { fg = colors.red_key_w, bg = colors.line_fg},
 
-  TroubleTextError = { fg = colors.red_err, bg = colors.black1 }, -- error info text
-  TroubleNormal = { fg = colors.white, bg = colors.black1 }, -- background color of trouble window
-  TroubleLocation = { fg = colors.white, bg = colors.black1 }, -- location of error
-  TroubleIndent = { fg = colors.white, bg = colors.black1 }, -- indent color
+  TroubleTextError = { fg = colors.red_key_w}, -- error info text
+  TroubleNormal = { fg = colors.white}, 
+  TroubleLocation = { fg = colors.white}, -- location of error
+  TroubleIndent = { fg = colors.comment }, -- indent color
 
-  TroubleCode = { fg = colors.yellow, bg = colors.black1 },
-  TroubleSignError = { fg = colors.red_err, bg = colors.black1 }, -- error sign color
+  TroubleCode = { fg = colors.orange_wr},
+  TroubleSignError = { fg = colors.red_key_w}, -- error sign color
 
-  -- TroubleSignWarning       = { fg = colors.red, bg = colors.green},
-  -- TroubleWarning       = { fg = colors.red, bg = colors.green},
-  -- TroublePreview       = { fg = colors.red, bg = colors.green},
-  -- TroubleSignInformation       = { fg = colors.red, bg = colors.green},
+  TroubleSignWarning       = { fg = colors.orange_wr},
+  TroubleWarning       = { fg = colors.orange_wr},
+  TroublePreview       = { fg = colors.red_key_w}, 
+  TroubleSignInformation       = { fg = colors.white},
 
-  -- TroubleSource = { fg = colors.red, bg = colors.green},
-  -- TroubleSignHint = { fg = colors.red, bg = colors.green},
-  -- TroubleSignOther = { fg = colors.red, bg = colors.green},
-  -- TroubleTextWarning = { fg = colors.red, bg = colors.green},
-  -- TroubleInformation = { fg = colors.red, bg = colors.green},
-  -- TroubleHint = { fg = colors.red, bg = colors.green},
-  -- TroubleTextHint = { fg = colors.red, bg = colors.green},
-  -- TroubleText = { fg = colors.red, bg = colors.green},
-
+  TroubleSource = { fg = colors.blue_type},
+  TroubleSignHint = { fg = colors.green},
+  TroubleSignOther = { fg = colors.green},
+  TroubleTextWarning = { fg = colors.orange_wr},
+  TroubleInformation = { fg = colors.white},
+  TroubleHint = { fg = colors.orange_wr},
+  TroubleTextHint = { fg = colors.white},
+  TroubleText = { fg = colors.white},
 
   -----------------------------------------
+
+  -----------------------------------------
+  -- CodeActionMenu: github.com/weilbith/nvim-code-action-menu
+  -----------------------------------------
+
+  CodeActionMenuWarningMessageText = { fg = colors.orange_wr},
+  CodeActionMenuWarningMessageBorder = { fg = colors.red_key_w},
+  CodeActionMenuMenuIndex   = { fg =  colors.blue_type},
+  CodeActionMenuMenuKind = { fg = colors.green},
+  CodeActionMenuMenuTitle       = { fg = colors.white},
+  CodeActionMenuMenuDisabled      = { fg = colors.comment},
+  CodeActionMenuMenuSelection   = { fg = colors.blue_type},
+  CodeActionMenuDetailsTitle = { fg = colors.white},
+  CodeActionMenuDetailsLabel = { fg = colors.yellow},
+  CodeActionMenuDetailsPreferred = { fg = colors.green},
+  CodeActionMenuDetailsDisabled = { fg = colors.comment},
+  CodeActionMenuDetailsUndefined = { fg = colors.comment},
+ 
+
+
 
 
   -----------------------------------------
@@ -515,15 +554,16 @@ M.plugins = {
   TSAttribute          = { fg = colors.white },
   TSBoolean            = { fg = colors.orange },
   TSCharacter          = { fg = colors.yellow },
+  TSCharacterSpecial   = { fg = colors.yellow },
   TSComment            = { fg = colors.comment, style = 'italic' },
   TSConditional        = { fg = colors.red_key_w },
-  TSConstBuiltin       = { fg = colors.orange },
-  TSConstMacro         = { fg = colors.white },
-  TSConstant           = { fg = colors.white },
+  TSConstBuiltin       = { fg = colors.pink },
+  TSConstMacro         = { fg = colors.blue_type },
+  TSConstant           = { fg = colors.pink },
   TSConstructor        = { fg = colors.white },
   TSEmphasis           = { style = 'italic' },
   TSError              = { fg = colors.red_err, bg = colors.bg, style = 'bold' },
-  TSException          = { fg = colors.white },
+  TSException          = { fg = colors.red_key_w },
   TSField              = { fg = colors.white },
   TSFloat              = { fg = colors.orange },
   TSFuncBuiltin        = { fg = colors.green_func },
@@ -534,7 +574,8 @@ M.plugins = {
   TSKeywordFunction    = { fg = colors.red_key_w },
   TSKeywordOperator    = { fg = colors.red_key_w },
   TSKeywordReturn      = { fg = colors.red_key_w },
-  TSLabel              = { fg = colors.white },
+  TSNone               = { fg = colors.orange },
+  TSLabel              = { fg = colors.pink },
   TSLiteral            = { fg = colors.yellow },
   TSMethod             = { fg = colors.red_key_w },
   TSNamespace          = { fg = colors.blue_type },
@@ -560,10 +601,13 @@ M.plugins = {
   TSTitle              = { fg = colors.white, style = 'bold' },
   TSType               = { fg = colors.pink },
   TSTypeBuiltin        = { fg = colors.blue_type },
+  TSTodo               = { fg = colors.orange },
+  TSTypeQualifier      = { fg = colors.red_key_w },
   TSURI                = { fg = colors.yellow, style = 'underline' },
   TSUnderline          = { style = 'underline' },
   TSVariable           = { fg = colors.white },
-  TSVariableBuiltin    = { fg = colors.white },
+  TSVariableBuiltin    = { fg = colors.pink },
+  TSDefine             = { fg = colors.red_key_w },
   -----------------------------------------
 
 }
