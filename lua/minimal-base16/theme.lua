@@ -97,7 +97,7 @@ M.base = {
     SignColumn          = { bg = colors.line_bg },
     Special             = { fg = colors.red_key_w },
     SpecialChar         = { fg = colors.green_func },
-    SpecialComment      = { fg = colors.comment },
+    SpecialComment      = { fg = colors.pink },
     SpecialKey          = { fg = colors.gray_punc, style = 'bold' },
     SpellBad            = { fg = colors.red_key_w, style = 'underline' },
     SpellCap            = { fg = colors.orange, style = 'underline' },
@@ -610,4 +610,3 @@ M.plugins = {
 }
 
 return M
-
