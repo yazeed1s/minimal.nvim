@@ -4,7 +4,7 @@ colors:
     foreground: '#DFE0EA'
   normal:
     black:   '#272932'
-    red:     '#D95555'
+    red:     '#E85A84'
     green:   '#94DD8E'
     yellow:  '#E9D26C'
     blue:    '#7EB7E6'
@@ -20,4 +20,3 @@ colors:
     magenta: '#D895C7'
     cyan:    '#89BEB7'
     white:   '#DFE0EA'
-
