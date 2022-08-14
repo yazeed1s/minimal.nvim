@@ -576,15 +576,15 @@ M.plugins = {
     TSNone               = { fg = colors.orange },
     TSLabel              = { fg = colors.pink },
     TSLiteral            = { fg = colors.yellow },
-    TSMethod             = { fg = colors.red_key_w },
+    TSMethod             = { fg = colors.green_func },
     TSNamespace          = { fg = colors.blue_type },
     TSNumber             = { fg = colors.orange },
     TSOperator           = { fg = colors.red_key_w },
     TSParameter          = { fg = colors.white },
     TSParameterReference = { fg = colors.white },
     TSProperty           = { fg = colors.white },
-    TSPunctBracket       = { fg = colors.gray_punc },
-    TSPunctDelimiter     = { fg = colors.gray_punc },
+    TSPunctBracket       = { fg = colors.white },
+    TSPunctDelimiter     = { fg = colors.white },
     TSPunctSpecial       = { fg = colors.gray_punc },
     TSQueryLinterError   = { fg = colors.red_err },
     TSRepeat             = { fg = colors.red_key_w },
@@ -598,7 +598,7 @@ M.plugins = {
     TSTagDelimiter       = { fg = colors.gray_punc },
     TSText               = { fg = colors.fg },
     TSTitle              = { fg = colors.white, style = 'bold' },
-    TSType               = { fg = colors.pink },
+    TSType               = { fg = colors.blue_type },
     TSTypeBuiltin        = { fg = colors.blue_type },
     TSTodo               = { fg = colors.orange },
     TSTypeQualifier      = { fg = colors.red_key_w },
@@ -612,4 +612,3 @@ M.plugins = {
 }
 
 return M
-
