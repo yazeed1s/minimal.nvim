@@ -553,7 +553,7 @@ M.plugins = {
     TSComment            = { fg = colors.comment, style = 'italic' },
     TSConditional        = { fg = colors.red_key_w },
     TSConstBuiltin       = { fg = colors.pink },
-    TSConstMacro         = { fg = colors.blue_func },
+    TSConstMacro         = { fg = colors.red_key_w },
     TSConstant           = { fg = colors.pink },
     TSConstructor        = { fg = colors.white },
     TSEmphasis           = { style = 'italic' },
