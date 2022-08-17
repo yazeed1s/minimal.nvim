@@ -83,6 +83,39 @@ vim.cmd[[colorscheme minimal-base16]] -- for minimal-base16
 lvim.colorscheme = 'minimal'
 lvim.colorscheme = 'minimal-base16'
 ```
+## ⚙️ Configuration
+
+Note: set the configurations **BEFORE** you load the color scheme
+
+| Option                     | Default   | Description              |
+| -------------------------- | --------- | ------------------------ |
+| minimal_italic_comments  | `true`    | Make comments italic     |
+| minimal_italic_keywords  | `false`   | Make keywords italic     |
+| minimal_italic_booleans  | `false`   | Make booleans italic     |
+| minimal_italic_functions | `false`   | Make functions italic    |
+| minimal_italic_variables | `false`   | Make variables italic    |
+| minimal_transparent_background      | `false`   | Disable background color |
+
+
+```lua
+-- Example config in lua
+vim.g.minimal_italic_functions = true
+vim.g.minimal_italic_comments = false
+-- Load the colorscheme
+vim.cmd [[colorscheme minimal]]
+-- or 
+vim.cmd [[colorscheme minimal-base16]]
+```
+
+```vim
+" Example config in Vim Script
+let g:minimal_italic_functions = 1
+let g:minimal_italic_comments = 0
+" Load the colorscheme
+colorscheme minimal
+" or 
+colorscheme minimal-base16
+```
 ## 👇 For terminal use:
 Color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty) can be found in [terminal](terminal). If you want to use them, pleas refer to their respective documentation and do changes to your `.config/` accordingly 
 
