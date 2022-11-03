@@ -19,14 +19,12 @@ If any of the colors does not syntax-highlight your langauge satisfactorily, ple
    ![screenshot_1](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--1.png)
    ![screenshot_2](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--2.png)
    ![screenshot_3](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--3.png)
-   ![screenshot_4](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal16--4.png)
 
 ### ⚡️ [minimal]
    ![screenshot_1](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--1.png)
    ![screenshot_2](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--2.png)
    ![screenshot_3](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--3.png)
-   ![screenshot_4](https://github.com/Yazeed1s/minimal.nvim/blob/main/screenshots/Minimal--4.png)
-
+  
 
 ## ✅ Plugin Support
 
